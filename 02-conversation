@@ -1,6 +1,6 @@
 #!/bin/bash
 
-echo "Sri: Hii Balu entii mari course ekkada daaka vachindii"
-echo "Balu: Hiii ra Sri, Orni nuvventi ikkada,asla em kadalatledu ra baabu"
-echo "Sri": avunaa balu ikkada kooda same ra. intakee interesting ga undaaa? "
-echo "Balu: Chalaaa interesting ga undi"
+echo "Sri: Hii Balu, How are you?"
+echo "Balu: Hiii Sri, I am doing well. Thanks for asking. How are you?"
+echo "Sri: I am doing well too. What are you learning Balu?"
+echo "Balu: I am learning Shell Scripting"
