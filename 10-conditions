@@ -2,20 +2,20 @@
 
 num=$1
 
-if[$num > 20]; then
+if[$num -gt 20]; then
 echo "Given number $num is greater  than  20"
 fi
 
-if[$num > 20]; then
+if[$num -gt 20]; then
 echo "Given number $num is greater  than  20"
 else
 echo "Given number $num is less  than  20"
 fi
 
 
-if[$num > 20]; then
+if[$num -gt 20]; then
 echo "Given number $num is greater  than  20"
-elseif[$num = 20]; then
+elseif[$num -eq 20]; then
 echo "Given number $num is equal to 20"
 else
 echo "Given number $num is less  than  20"
