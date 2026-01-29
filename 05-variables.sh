@@ -2,7 +2,7 @@
 
 echo "Enter Username"
 read user_name 
-echo "Username is $username"
+echo "Username is $user_name"
 echo "Enter Password"
 read -s password
 echo "Password is hidden Enter secret code to display password"
