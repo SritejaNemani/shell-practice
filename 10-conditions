@@ -2,7 +2,7 @@
 
 num=$1
 
-if[$num -gt 20]; then
+if [$num -gt 20]; then
 echo "Given number $num is greater  than  20"
 fi
 #
