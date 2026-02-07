@@ -1,7 +1,7 @@
 #!/bin/bash
 
 USER_ID=$(id -u)
-LOGS_FOLDER="/var/log/shel;l-script"
+LOGS_FOLDER="/var/log/shell-script"
 LOGS_FILE="$LOGS_FOLDER/$0.log"
 
 if [ $USER_ID -ne 0 ]; then
@@ -11,7 +11,6 @@ fi
 
 mkdir -p $LOGS_FOLDER
 
-exit 1
 
 VALIDATE(){
    if [ $1 -ne 0 ]; then
