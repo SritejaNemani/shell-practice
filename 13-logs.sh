@@ -10,7 +10,7 @@ if [ $USER_ID -ne 0 ]; then
 fi
 
 mkdir -p $LOGS_FOLDER
-echo $LOGS_FILE
+
 exit 1
 
 VALIDATE(){
