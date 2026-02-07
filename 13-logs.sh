@@ -11,6 +11,7 @@ fi
 
 mkdir -p $LOGS_FOLDER
 echo $LOGS_FILE
+exit 1
 
 VALIDATE(){
    if [ $1 -ne 0 ]; then
