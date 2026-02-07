@@ -10,6 +10,7 @@ fi
 VALIDATE(){
    if [ $1 -ne 0 ]; then
       echo "$2 Failure"
+      exit 1 # here if it is one installation like prev screipt exiit 1 isn't required but here if we don'r exit the script will continue with next installations which may lead to problem
    else 
       echo "$2 Success"
    fi
