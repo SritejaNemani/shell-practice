@@ -21,7 +21,7 @@ VALIDATE(){
 }
 
 echo "Installing Nginx"
-dnf install ngjinx -y &>> $LOGS_FILE
+dnf install nginx -y &>> $LOGS_FILE
 VALIDATE $? "Nginx Installation"
 
 echo "Installing NodeJs"
