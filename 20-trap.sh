@@ -4,7 +4,7 @@
 #!/bin/bash
 
 set -e # this will be checking for errors, if errors it will exit also generates an singnal called ERR
-trap ' echo "There is an error in $lineno, Command: $BASH_COMMAND"' ERR
+trap ' echo "There is an error in $LINENO, Command: $BASH_COMMAND"' ERR
 
 USER_ID=$(id -u)
 LOGS_FOLDER="/var/log/shell-script"
