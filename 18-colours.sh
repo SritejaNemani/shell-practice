@@ -31,7 +31,7 @@ do
 
     if [ $? -eq 0 ]; then
 
-     echo -e "$Y $package already exists so skipping$N"
+     echo -e " $package already exists $Y so skipping$N"
         
     else
 
