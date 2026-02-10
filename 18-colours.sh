@@ -33,7 +33,7 @@ do
 
      echo -e " $package already exists $Y so skipping$N"
         
-    else
+    elses
 
         echo "$package not Installed so Installing $package"
         dnf install $package -y &>> $LOGS_FILE
