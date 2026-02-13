@@ -1,0 +1,17 @@
+#!/bin/bash
+R="\e[31m" #red
+G="\e[32m" #green
+Y="\e[33m" #yellow
+N="\e[0m" #normal-white
+
+LOGS_DIR=/home/ec2-user/app-logs
+LOGS_FILE="$LOGS_DIR/$0.log"
+
+if [ ! -d $LOGS_DIR ]; then
+    echo -e "$LOGS_DIR doesn't exist"
+    exit 1
+fi
+
+FILE_TO_DELETE=$(find $LOGS_DIR -name "*.log" -mtime +14)
+echo -e "$FILES_TO_DELETE"
+
