@@ -1,0 +1,6 @@
+#!/bin/bash
+
+while IFS= read -r line; 
+do  
+    echo "$line" #prints line by line - process each line
+done < ./21-script.sh #input file to read
