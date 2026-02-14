@@ -17,4 +17,6 @@ echo -e "Files that are older than 14 days are: $FILES_TO_DELETE"
 
 while IFS= read -r filepath; do  
     echo "Deleting file: $filepath" #prints line by line - process each line
+    rm -f $filepath
+    echo "Deleted file: $filepath"
 done <<< $FILES_TO_DELETE 
