@@ -13,7 +13,7 @@ if [ ! -d $LOGS_DIR ]; then
 fi
 
 FILES_TO_DELETE=$(find $LOGS_DIR -name "*.log" -mtime +14)
-echo -e "$FILES_TO_DELETE"
+echo -e "Files that are older than 14 days are: $FILES_TO_DELETE"
 
 #while IFS= read -r filepath; do  
  #   echo "$filepath" #prints line by line - process each line
