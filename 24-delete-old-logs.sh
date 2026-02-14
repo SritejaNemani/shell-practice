@@ -12,6 +12,9 @@ if [ ! -d $LOGS_DIR ]; then
     exit 1
 fi
 
-FILE_TO_DELETE=$(find $LOGS_DIR -name "*.log" -mtime +14)
+FILES_TO_DELETE=$(find $LOGS_DIR -name "*.log" -mtime +14)
 echo -e "$FILES_TO_DELETE"
 
+#while IFS= read -r filepath; do  
+ #   echo "$filepath" #prints line by line - process each line
+#done <<< $FILES_TO_DELETE 
