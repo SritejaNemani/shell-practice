@@ -16,7 +16,7 @@ FILES_TO_DELETE=$(find $LOGS_DIR -name "*.log" -mtime +14)
 echo -e "Files that are older than 14 days are: $FILES_TO_DELETE"
 
 while IFS= read -r filepath; do  
-    echo "Deleting file: $filepath" #prints line by line - process each line
+    echo "Deleting file: $filepath" #prints line by line - process each line # reads each line stores the line in variable filepath executed remaining commands in  while loop and repeats again 2nd line is stored in the variable filepath executed commands in while loop 
     rm -f $filepath
     echo "Deleted file: $filepath"
 done <<< $FILES_TO_DELETE 
