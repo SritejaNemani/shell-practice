@@ -6,6 +6,9 @@ R="\e[31m" #red
 G="\e[32m" #green
 Y="\e[33m" #yellow
 N="\e[0m" #normal-white
+SOURCE_DIR=$1
+DEST_DIR=$2
+DAYS=${3:-14} #14 days is default if user not supplied
 
 
 #testing if root user or not 
@@ -25,3 +28,12 @@ if [ $# -lt 2 ]; then
     USAGE                # we are calling usage function when the argumenst are given are l;ess than 2  that is we are showing the actyual usage kfj 
 fi
 
+if [ ! -d $SOURCE_DIR ]; then
+    echo -e "$R $SOURCE_DIR doesn't exixit $N"
+    exit 1
+fi
+
+if [ ! -d $DEST_DIR ]; then
+    echo -e "$R $DEST_DIR doesn't exixit $N"
+    exit 1
+fi
