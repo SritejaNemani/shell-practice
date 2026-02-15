@@ -24,16 +24,31 @@ USAGE(){
     exit 1
 }
 
+log(){
+    echo -e "$(date "=%Y-%m %H:%M:%S") | $1" | tee -a $LOGS_FILE
+}
+
 if [ $# -lt 2 ]; then
     USAGE                # we are calling usage function when the argumenst are given are l;ess than 2  that is we are showing the actyual usage kfj 
 fi
 
 if [ ! -d $SOURCE_DIR ]; then
-    echo -e "$R $SOURCE_DIR doesn't exixit $N"
+    echo -e "$R Source Directory $SOURCE_DIR doesn't exixit $N"
     exit 1
 fi
 
 if [ ! -d $DEST_DIR ]; then
-    echo -e "$R $DEST_DIR doesn't exixit $N"
+    echo -e "$R Destination Directory $DEST_DIR doesn't exixit $N"
     exit 1
 fi
+
+#### Find th efiles
+
+FILES=$(find $SOURCE_DIR -name "*.log" -type f -mtime +$DAYS)
+
+log "backup started"
+log "Source Directory : $SOURCE_DIR"
+log "DEstination Directory : $DEST_DIR"
+log "Days : $DAYS"
+
+
