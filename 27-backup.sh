@@ -56,7 +56,7 @@ if [ -z "{$FILES}" ]; then
 else
     #Format: app-logs-$timestamp.zip
     log "Files found to archive : $FILES"
-    TIMESTAMP=$(date +%F-%H:%M:%S)
+    TIMESTAMP=$(date +%F-%H-%M-%S)
     ZIP_FILE_NAME="$DEST_DIR/app-logs-$TIMESTAMP.tar.gz"
     echo " Archive name = $ZIP_FILE_NAME"
     tar -zcvf $ZIP_FILE_NAME $(find $SOURCE_DIR -name "*.log" -type f -mtime +$DAYS)
