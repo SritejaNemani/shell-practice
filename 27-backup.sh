@@ -51,7 +51,7 @@ log "Source Directory : $SOURCE_DIR"
 log "DEstination Directory : $DEST_DIR"
 log "Days : $DAYS"
 
-if [ -z $FILES ]; then
+if [ -z {$FILES} ]; then
     log "Nothing to archive....$Y Skipping $N"   # checking if there are any log files to back up
 else
     #Format: app-logs-$timestamp.zip
