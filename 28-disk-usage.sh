@@ -16,9 +16,9 @@ USAGE_THRESHOLD=3
 while IFS= read -r line 
 do
 
-    USAGE=$(df -hT | grep -v Filesystem | awk '{print $6}' | cut -d "%" -f1)
-    PARTITION=$(df -hT | grep -v Filesystem | awk '{print $7}') 
-    if [ USAGEUSAGE -gt $USAGE_THRESHOLD]; then 
+    USAGE=$($line | awk '{print $6}' | cut -d "%" -f1)
+    PARTITION=$($line | awk '{print $7}') 
+    if [ "$USAGE" -gt "$USAGE_THRESHOLD"]; then 
         MESSAGE+="High Disk Usage on $PARTITION : $USAGE" #       if given Message= then everytime loop is executed message gets replaced - but here (+=) it appends the exixting      
                   
     fi
