@@ -4,7 +4,7 @@ R="\e[31m" #red
 G="\e[32m" #green
 Y="\e[33m" #yellow
 N="\e[0m" #normal-white
-
+IP_ADDRESS=$(curl http://169.254.169.254/latest/meta-data/local-ipv4)
 
 log(){
     echo -e "$(date "+%Y-%m %H:%M:%S") | $1" | tee -a $LOGS_FILE
@@ -26,3 +26,6 @@ do
 done <<< $DISK_USAGE
 
 echo -e "$MESSAGE"
+
+
+sh mail.sh "mulavyshnavi@gmail.com" "High disk Usage on $IP_ADDRESS" "$MESSAGE" "High Disk Usage" "$IP_ADDRESS" "DevOps Team"
