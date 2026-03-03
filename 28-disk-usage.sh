@@ -19,7 +19,7 @@ do
     USAGE=$(echo $line | awk '{print $6}' | cut -d "%" -f1)
     PARTITION=$(echo $line | awk '{print $7}') 
     if [ "$USAGE" -gt "$USAGE_THRESHOLD" ]; then 
-        MESSAGE+="High Disk Usage on $PARTITION : $USAGE% \n" #       if given Message= then everytime loop is executed message gets replaced - but here (+=) it appends the exixting      
+        MESSAGE+="High Disk Usage on $PARTITION : $USAGE% <br>" #       if given Message= then everytime loop is executed message gets replaced - but here (+=) it appends the exixting      
                   
     fi
 
@@ -28,4 +28,4 @@ done <<< $DISK_USAGE
 echo -e "$MESSAGE"
 
 
-sh mail.sh "mulavyshnavi@gmail.com" "High disk Usage on $IP_ADDRESS" "$MESSAGE" "High Disk Usage" "$IP_ADDRESS" "DevOps Team"
+sh mail.sh "mulavyshnavi@gmail.com" "High Disk Usage on $IP_ADDRESS" "$MESSAGE" "High Disk Usage" "$IP_ADDRESS" "DevOps Team"
